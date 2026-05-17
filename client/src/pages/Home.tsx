@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Globe, Users, TrendingUp, Lock, Zap } from "lucide-react";
+import { CheckCircle2, Globe, Users, TrendingUp, Lock, Zap, Award, Star } from "lucide-react";
 import { useState } from "react";
 
 /**
- * Design Philosophy: Minimalismo Corporativo Premium
- * - Paleta: Azul profundo (#1E3A8A) + Laranja quente (#F97316)
+ * Design Philosophy: Premium Dark Luxury
+ * - Paleta: Azul escuro profundo (#0F172A) + Cyan vibrante (#00D4FF)
  * - Tipografia: Poppins (headlines) + Inter (body)
- * - Layout: Assimétrico, nunca centrado
- * - Foco: Credibilidade, clareza, conversão
+ * - Layout: Assimétrico com imagens full-width
+ * - Foco: Credibilidade, autoridade, transformação, prova social
+ * - Inspirado em: concretolucrativo.com.br
  */
 
 export default function Home() {
@@ -25,48 +26,51 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-gray-100">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 backdrop-blur-sm">
+      <nav className="sticky top-0 z-50 bg-slate-900/95 border-b border-slate-700/50 backdrop-blur-sm">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#1E3A8A] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PCM</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <span className="text-slate-900 font-bold text-sm">PCM</span>
             </div>
-            <span className="font-bold text-lg text-[#1E3A8A]">Profitable Cuba Method</span>
+            <span className="font-bold text-lg bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Profitable Cuba Method
+            </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#benefits" className="text-gray-600 hover:text-[#1E3A8A] transition-colors">
-              Benefits
+            <a href="#creator" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Creator
             </a>
-            <a href="#modules" className="text-gray-600 hover:text-[#1E3A8A] transition-colors">
+            <a href="#modules" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Modules
             </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-[#1E3A8A] transition-colors">
-              Success Stories
+            <a href="#testimonials" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Results
             </a>
-            <a href="#faq" className="text-gray-600 hover:text-[#1E3A8A] transition-colors">
+            <a href="#faq" className="text-gray-300 hover:text-cyan-400 transition-colors">
               FAQ
             </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="section-spacing pt-8 md:pt-16 bg-white">
-        <div className="container">
+      {/* Hero Section with Full-Width Background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 via-transparent to-transparent pointer-events-none" />
+        <div className="container relative py-20 md:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text Content */}
-            <div className="space-y-6">
-              <div className="inline-block px-4 py-2 bg-blue-50 rounded-full border border-blue-200">
-                <span className="text-sm font-semibold text-[#1E3A8A]">✓ Proven in 72 Countries</span>
+            <div className="space-y-6 z-10">
+              <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
+                <span className="text-sm font-bold text-cyan-400">✓ Proven Method in 72 Countries</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Turn Concrete Into <span className="gradient-text">Premium Income</span>
               </h1>
 
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed">
                 Master the exclusive method used by 1,357+ students worldwide to create and sell luxury concrete sinks. Generate $1,000 to $2,000+ per month with minimal investment and zero experience required.
               </p>
 
@@ -81,14 +85,14 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-blue-50"
+                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
                 >
                   Watch Free Preview
                 </Button>
               </div>
 
-              <div className="flex items-center gap-4 pt-4 text-sm text-gray-600">
-                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+              <div className="flex items-center gap-4 pt-4 text-sm text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
@@ -98,10 +102,10 @@ export default function Home() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/hero-concrete-sinks-3WYD28Lx7FHzUEBWZThDC2.webp"
                 alt="Luxury Concrete Sinks"
-                className="w-full rounded-xl shadow-2xl"
+                className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20"
               />
-              <div className="absolute -bottom-6 -left-6 bg-[#F97316] text-white p-4 rounded-lg shadow-lg max-w-xs">
-                <p className="font-bold text-lg">1,357+ Students</p>
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-900 p-6 rounded-xl shadow-2xl max-w-xs font-bold">
+                <p className="text-lg">1,357+ Students</p>
                 <p className="text-sm opacity-90">Learning in 72 Countries</p>
               </div>
             </div>
@@ -110,95 +114,132 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 bg-gray-50 border-y border-gray-200">
+      <section className="py-12 bg-slate-800/50 border-y border-slate-700/50">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <p className="stat-number">1,357+</p>
-              <p className="text-gray-600 mt-2">Active Students</p>
+              <p className="text-gray-300 mt-2">Active Students</p>
             </div>
             <div className="text-center">
               <p className="stat-number">72</p>
-              <p className="text-gray-600 mt-2">Countries</p>
+              <p className="text-gray-300 mt-2">Countries</p>
             </div>
             <div className="text-center">
               <p className="stat-number">$2K+</p>
-              <p className="text-gray-600 mt-2">Monthly Income</p>
+              <p className="text-gray-300 mt-2">Monthly Income</p>
             </div>
             <div className="text-center">
               <p className="stat-number">4.9★</p>
-              <p className="text-gray-600 mt-2">Average Rating</p>
+              <p className="text-gray-300 mt-2">Average Rating</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
-      <section className="section-spacing bg-white">
+      {/* Creator Section - Rafael Bruno */}
+      <section id="creator" className="section-spacing bg-gradient-to-b from-slate-900 to-slate-950">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="order-2 lg:order-1">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur opacity-30" />
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/before-after-transformation-fRVTDCtyCL2v748898jUzE.webp"
-                alt="Before and After Transformation"
-                className="w-full rounded-xl shadow-lg"
+                src="/manus-storage/rafael-bruno-mentor_1c25ce18.jpg"
+                alt="Rafael Bruno - Creator of Profitable Cuba Method"
+                className="relative w-full rounded-2xl shadow-2xl shadow-cyan-500/30 border border-cyan-500/30"
               />
+              <div className="absolute bottom-6 left-6 creator-badge">
+                12 Years Expert
+              </div>
             </div>
 
             {/* Text */}
-            <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold">
-                From Beginner to <span className="gradient-text">Premium Creator</span>
-              </h2>
-
-              <p className="text-lg text-gray-600">
-                Maybe you work hard, have skills, and deliver quality. But while you struggle with profit margins, ordinary people are using concrete to create valuable pieces sold as art.
-              </p>
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  Meet <span className="gradient-text">Rafael Bruno</span>
+                </h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Creator & Mentor of the Profitable Cuba Method
+                </p>
+              </div>
 
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Award className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">Low Production Cost</p>
-                    <p className="text-gray-600">Just $5-$15 per sink to create</p>
+                    <p className="font-bold text-white">12 Years of Experience</p>
+                    <p className="text-gray-300">Industry expert in premium concrete craftsmanship</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">High-Value Product</p>
-                    <p className="text-gray-600">Sell for $60-$500+ per piece</p>
+                    <p className="font-bold text-white">1,357+ Students Trained</p>
+                    <p className="text-gray-300">Proven track record of success across 72 countries</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <TrendingUp className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">Minimal Space Required</p>
-                    <p className="text-gray-600">Start from home or small studio</p>
+                    <p className="font-bold text-white">$2,000+ Monthly Income</p>
+                    <p className="text-gray-300">Average student earnings with the method</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Star className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900">No Experience Needed</p>
-                    <p className="text-gray-600">Complete step-by-step guidance</p>
+                    <p className="font-bold text-white">4.9★ Rating</p>
+                    <p className="text-gray-300">Trusted by thousands of satisfied students</p>
                   </div>
                 </div>
               </div>
+
+              <p className="text-gray-300 leading-relaxed pt-4">
+                Rafael Bruno has dedicated over a decade to perfecting the art of creating high-end concrete sinks and building a sustainable business around it. His proven method has transformed the lives of entrepreneurs worldwide, helping them escape the 9-to-5 grind and build profitable, creative businesses.
+              </p>
+
+              <Button
+                size="lg"
+                className="cta-button text-lg"
+                onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Learn from Rafael Bruno
+              </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Before/After Transformation */}
+      <section className="section-spacing bg-slate-950">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              From Beginner to <span className="gradient-text">Premium Creator</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              See the transformation our students experience
+            </p>
+          </div>
+
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/before-after-transformation-fRVTDCtyCL2v748898jUzE.webp"
+            alt="Before and After Transformation"
+            className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20"
+          />
         </div>
       </section>
 
       {/* Course Modules Section */}
-      <section id="modules" className="section-spacing bg-gray-50">
+      <section id="modules" className="section-spacing bg-gradient-to-b from-slate-900 to-slate-950">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               8 Complete <span className="gradient-text">Course Modules</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               A comprehensive step-by-step system to master concrete creation and build a thriving business
             </p>
           </div>
@@ -206,35 +247,106 @@ export default function Home() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/course-modules-visual-F9bHDLnwzHKii3oUWxizyT.webp"
             alt="Course Modules Overview"
-            className="w-full rounded-xl shadow-lg mb-12"
+            className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20 mb-12"
           />
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Social Proof - Real Results */}
+      <section id="testimonials" className="section-spacing bg-slate-950">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            Real Results from <span className="gradient-text">Real Students</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", title: "Concrete Fundamentals", icon: "🏗️" },
-              { num: "02", title: "Mold Design & Creation", icon: "🎨" },
-              { num: "03", title: "High-End Finishes", icon: "✨" },
-              { num: "04", title: "Color & Pigmentation", icon: "🎭" },
-              { num: "05", title: "Sealing & Protection", icon: "🛡️" },
-              { num: "06", title: "Pricing Strategy", icon: "💰" },
-              { num: "07", title: "Marketing & Sales", icon: "📢" },
-              { num: "08", title: "Business Scaling", icon: "📈" },
-            ].map((module) => (
-              <Card key={module.num} className="p-6 border-2 border-gray-200 hover:border-[#1E3A8A] transition-colors">
-                <div className="text-3xl mb-3">{module.icon}</div>
-                <p className="text-sm font-semibold text-[#1E3A8A] mb-2">Module {module.num}</p>
-                <p className="font-semibold text-gray-900">{module.title}</p>
+              {
+                name: "Michael Johnson",
+                location: "USA",
+                income: "$1,500/sink",
+                text: "Within 2 months, I was making $1,500 per sink. This method completely changed my life. Highly recommended!",
+                rating: 5,
+              },
+              {
+                name: "Sarah Williams",
+                location: "UK",
+                income: "$1,200/sink",
+                text: "The step-by-step guidance is incredible. Even with zero experience, I created beautiful sinks that customers love.",
+                rating: 5,
+              },
+              {
+                name: "David Chen",
+                location: "Canada",
+                income: "$2,000/month",
+                text: "Best investment I made. The community support is amazing, and the results speak for themselves. Thank you!",
+                rating: 5,
+              },
+            ].map((testimonial, idx) => (
+              <Card key={idx} className="dark-card p-8 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="flex gap-1 mb-4">
+                  {Array(testimonial.rating)
+                    .fill(0)
+                    .map((_, i) => (
+                      <span key={i} className="text-cyan-400 text-lg">
+                        ★
+                      </span>
+                    ))}
+                </div>
+                <div className="mb-4 inline-block px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full">
+                  <span className="text-sm font-bold text-cyan-400">{testimonial.income}</span>
+                </div>
+                <p className="text-gray-200 mb-6 italic">"{testimonial.text}"</p>
+                <div>
+                  <p className="font-bold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-400">{testimonial.location}</p>
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="section-spacing bg-white">
+      {/* Global Reach */}
+      <section className="section-spacing bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Trusted by Students <span className="gradient-text">Worldwide</span>
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                From the USA to the UK, Canada to Australia, students are building profitable concrete businesses using our proven method. Join a global community of successful entrepreneurs.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-slate-900 font-bold">
+                    72
+                  </div>
+                  <p className="font-semibold text-white">Countries with active students</p>
+                </div>
+                <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-slate-900 font-bold">
+                    1.3K+
+                  </div>
+                  <p className="font-semibold text-white">Successful entrepreneurs</p>
+                </div>
+              </div>
+            </div>
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/global-students-map-WVSCLoZzWRpnTdiDzMQ3gV.webp"
+              alt="Global Reach Map"
+              className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose This Method */}
+      <section className="section-spacing bg-slate-950">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            Why Choose <span className="gradient-text">Profitable Cuba Method</span>
+            Why <span className="gradient-text">Profitable Cuba Method</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -262,7 +374,7 @@ export default function Home() {
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Expert Support",
-                desc: "Direct access to the creator and community. Real answers to your real questions.",
+                desc: "Direct access to Rafael Bruno and community. Real answers to your real questions.",
               },
               {
                 icon: <CheckCircle2 className="w-8 h-8" />,
@@ -270,94 +382,10 @@ export default function Home() {
                 desc: "30-day guarantee. If you're not satisfied, get a full refund, no questions asked.",
               },
             ].map((benefit, idx) => (
-              <Card key={idx} className="p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="text-[#1E3A8A] mb-4">{benefit.icon}</div>
-                <h3 className="font-bold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Global Reach */}
-      <section className="section-spacing bg-blue-50">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Trusted by Students <span className="gradient-text">Worldwide</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                From the USA to the UK, Canada to Australia, students are building profitable concrete businesses using our proven method. Join a global community of successful entrepreneurs.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#1E3A8A] rounded-full flex items-center justify-center text-white font-bold">
-                    72
-                  </div>
-                  <p className="font-semibold">Countries with active students</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#F97316] rounded-full flex items-center justify-center text-white font-bold">
-                    1.3K+
-                  </div>
-                  <p className="font-semibold">Successful entrepreneurs</p>
-                </div>
-              </div>
-            </div>
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/global-students-map-WVSCLoZzWRpnTdiDzMQ3gV.webp"
-              alt="Global Reach Map"
-              className="w-full rounded-xl shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="section-spacing bg-white">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            What Students Say
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Michael Johnson",
-                location: "USA",
-                text: "Within 2 months, I was making $1,500 per sink. This method completely changed my life. Highly recommended!",
-                rating: 5,
-              },
-              {
-                name: "Sarah Williams",
-                location: "UK",
-                text: "The step-by-step guidance is incredible. Even with zero experience, I created beautiful sinks that customers love.",
-                rating: 5,
-              },
-              {
-                name: "David Chen",
-                location: "Canada",
-                text: "Best investment I made. The community support is amazing, and the results speak for themselves. Thank you!",
-                rating: 5,
-              },
-            ].map((testimonial, idx) => (
-              <Card key={idx} className="p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="flex gap-1 mb-4">
-                  {Array(testimonial.rating)
-                    .fill(0)
-                    .map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg">
-                        ★
-                      </span>
-                    ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
-                <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.location}</p>
-                </div>
+              <Card key={idx} className="dark-card p-6 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="text-cyan-400 mb-4">{benefit.icon}</div>
+                <h3 className="font-bold text-lg mb-2 text-white">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.desc}</p>
               </Card>
             ))}
           </div>
@@ -365,17 +393,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta-section" className="section-spacing bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] text-white">
+      <section id="cta-section" className="section-spacing bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-slate-950 border-y border-cyan-500/30">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your Concrete Business?
+              Ready to Start Your <span className="gradient-text">Concrete Business?</span>
             </h2>
-            <p className="text-lg opacity-90 mb-8">
-              Join 1,357+ successful students. Get instant access to all 8 modules, lifetime support, and community access.
+            <p className="text-lg text-gray-300 mb-8">
+              Join 1,357+ successful students. Get instant access to all 8 modules, lifetime support, and community access. Learn directly from Rafael Bruno.
             </p>
 
-            <div className="bg-white rounded-xl p-8 shadow-2xl">
+            <div className="bg-slate-800/80 backdrop-blur border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="email"
@@ -383,22 +411,22 @@ export default function Home() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-6 py-4 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                  className="w-full px-6 py-4 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-[#F97316] hover:bg-orange-600 text-white text-lg py-6 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 active:scale-95"
+                  className="w-full cta-button text-lg py-6 rounded-lg font-bold"
                 >
                   {submitted ? "✓ Check Your Email!" : "Get Instant Access - $147"}
                 </Button>
               </form>
-              <p className="text-sm text-gray-600 mt-4">
+              <p className="text-sm text-gray-400 mt-4">
                 ✓ 30-day money-back guarantee • ✓ Lifetime access • ✓ No hidden fees
               </p>
             </div>
 
-            <p className="text-white opacity-75 mt-8">
+            <p className="text-gray-400 mt-8">
               Limited spots available. Join the next cohort of successful entrepreneurs.
             </p>
           </div>
@@ -406,7 +434,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="section-spacing bg-gray-50">
+      <section id="faq" className="section-spacing bg-slate-950">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             Frequently Asked Questions
@@ -420,7 +448,7 @@ export default function Home() {
               },
               {
                 q: "I have no experience. Can I still buy it?",
-                a: "Absolutely! The course is designed for complete beginners. Step-by-step video lessons guide you through every process.",
+                a: "Absolutely! The course is designed for complete beginners. Rafael provides step-by-step video lessons guiding you through every process.",
               },
               {
                 q: "Do I need a large space?",
@@ -436,12 +464,12 @@ export default function Home() {
               },
               {
                 q: "How long will I have access to the course?",
-                a: "Forever! One payment gives you lifetime access to all materials, updates, and community support.",
+                a: "Forever! One payment gives you lifetime access to all materials, updates, and community support from Rafael.",
               },
             ].map((faq, idx) => (
-              <Card key={idx} className="p-6 border border-gray-200">
-                <h3 className="font-bold text-lg mb-3 text-gray-900">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
+              <Card key={idx} className="dark-card p-6 hover:border-cyan-500/50 transition-all duration-300">
+                <h3 className="font-bold text-lg mb-3 text-white">{faq.q}</h3>
+                <p className="text-gray-300">{faq.a}</p>
               </Card>
             ))}
           </div>
@@ -449,13 +477,13 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-white border-t border-gray-200">
+      <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-700/50">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Your Journey Starts Today
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Stop struggling with profit margins. Start creating luxury concrete sinks and build the profitable business you deserve.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Stop struggling with profit margins. Start creating luxury concrete sinks and build the profitable business you deserve. Learn from Rafael Bruno.
           </p>
           <Button
             size="lg"
@@ -468,35 +496,35 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-slate-950 border-t border-slate-700/50 text-gray-400 py-12">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <p className="font-bold text-white mb-4">Profitable Cuba Method</p>
-              <p className="text-sm">Master the art of creating luxury concrete sinks and build a thriving business.</p>
+              <p className="text-sm">Master the art of creating luxury concrete sinks from Rafael Bruno, the industry expert with 12+ years of experience.</p>
             </div>
             <div>
               <p className="font-bold text-white mb-4">Quick Links</p>
               <ul className="space-y-2 text-sm">
-                <li><a href="#benefits" className="hover:text-white transition-colors">Benefits</a></li>
-                <li><a href="#modules" className="hover:text-white transition-colors">Modules</a></li>
-                <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
+                <li><a href="#creator" className="hover:text-cyan-400 transition-colors">Creator</a></li>
+                <li><a href="#modules" className="hover:text-cyan-400 transition-colors">Modules</a></li>
+                <li><a href="#testimonials" className="hover:text-cyan-400 transition-colors">Results</a></li>
               </ul>
             </div>
             <div>
               <p className="font-bold text-white mb-4">Support</p>
               <ul className="space-y-2 text-sm">
-                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#faq" className="hover:text-cyan-400 transition-colors">FAQ</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
               <p className="font-bold text-white mb-4">Global Reach</p>
-              <p className="text-sm">72 Countries • 1,357+ Students • 4.9★ Rating</p>
+              <p className="text-sm">72 Countries • 1,357+ Students • 4.9★ Rating • 12+ Years Expert</p>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
+          <div className="border-t border-slate-700/50 pt-8 text-center text-sm">
             <p>&copy; 2026 Método Cuba Lucrativa. All rights reserved. | 30-day Money-Back Guarantee</p>
           </div>
         </div>

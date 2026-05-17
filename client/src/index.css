@@ -43,75 +43,75 @@
 }
 
 :root {
-  /* Corporate Premium Design System */
-  --primary: #1E3A8A;
+  /* Premium Dark Luxury Design System - Inspired by concretolucrativo.com.br */
+  --primary: #0F172A;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #1E3A8A;
+  --sidebar-primary: #0F172A;
   --sidebar-primary-foreground: #FFFFFF;
-  --accent: #F97316;
-  --accent-foreground: #FFFFFF;
-  --chart-1: #1E3A8A;
-  --chart-2: #2563EB;
-  --chart-3: #3B82F6;
-  --chart-4: #60A5FA;
-  --chart-5: #93C5FD;
+  --accent: #00D4FF;
+  --accent-foreground: #0F172A;
+  --chart-1: #00D4FF;
+  --chart-2: #0099CC;
+  --chart-3: #0077AA;
+  --chart-4: #005588;
+  --chart-5: #003366;
   --radius: 0.5rem;
-  --background: #FFFFFF;
-  --foreground: #1F2937;
-  --card: #FFFFFF;
-  --card-foreground: #1F2937;
-  --popover: #FFFFFF;
-  --popover-foreground: #1F2937;
-  --secondary: #F8F9FA;
-  --secondary-foreground: #374151;
-  --muted: #E5E7EB;
-  --muted-foreground: #6B7280;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #E5E7EB;
-  --input: #F3F4F6;
-  --ring: #1E3A8A;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #1F2937;
-  --sidebar-accent: #F8F9FA;
-  --sidebar-accent-foreground: #1E3A8A;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #1E3A8A;
-}
-
-.dark {
-  --primary: #1E3A8A;
-  --primary-foreground: #FFFFFF;
-  --sidebar-primary: #1E3A8A;
-  --sidebar-primary-foreground: #FFFFFF;
   --background: #0F172A;
   --foreground: #E5E7EB;
-  --card: #1E293B;
+  --card: #1A2847;
   --card-foreground: #E5E7EB;
-  --popover: #1E293B;
+  --popover: #1A2847;
   --popover-foreground: #E5E7EB;
-  --secondary: #1E293B;
+  --secondary: #1A2847;
   --secondary-foreground: #CBD5E1;
   --muted: #334155;
   --muted-foreground: #94A3B8;
-  --accent: #F97316;
-  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #334155;
-  --input: #1E293B;
-  --ring: #1E3A8A;
-  --sidebar: #1E293B;
+  --input: #1A2847;
+  --ring: #00D4FF;
+  --sidebar: #1A2847;
   --sidebar-foreground: #E5E7EB;
   --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-accent-foreground: #00D4FF;
   --sidebar-border: #334155;
-  --sidebar-ring: #1E3A8A;
-  --chart-1: #1E3A8A;
-  --chart-2: #2563EB;
-  --chart-3: #3B82F6;
-  --chart-4: #60A5FA;
-  --chart-5: #93C5FD;
+  --sidebar-ring: #00D4FF;
+}
+
+.dark {
+  --primary: #0F172A;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0F172A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0F172A;
+  --foreground: #E5E7EB;
+  --card: #1A2847;
+  --card-foreground: #E5E7EB;
+  --popover: #1A2847;
+  --popover-foreground: #E5E7EB;
+  --secondary: #1A2847;
+  --secondary-foreground: #CBD5E1;
+  --muted: #334155;
+  --muted-foreground: #94A3B8;
+  --accent: #00D4FF;
+  --accent-foreground: #0F172A;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #334155;
+  --input: #1A2847;
+  --ring: #00D4FF;
+  --chart-1: #00D4FF;
+  --chart-2: #0099CC;
+  --chart-3: #0077AA;
+  --chart-4: #005588;
+  --chart-5: #003366;
+  --sidebar: #1A2847;
+  --sidebar-foreground: #E5E7EB;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #00D4FF;
+  --sidebar-border: #334155;
+  --sidebar-ring: #00D4FF;
 }
 
 @layer base {
@@ -188,32 +188,40 @@
     }
   }
 
-  /* Premium Design System Components */
+  /* Premium Dark Luxury Components */
   .section-divider {
-    @apply h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent;
+    @apply h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent;
   }
 
   .cta-button {
-    @apply px-8 py-4 bg-[#F97316] text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+    @apply px-8 py-4 bg-cyan-500 text-slate-900 font-bold rounded-lg hover:bg-cyan-400 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-2xl;
   }
 
   .stat-number {
-    @apply text-4xl md:text-5xl font-bold text-[#1E3A8A];
+    @apply text-4xl md:text-5xl font-bold text-cyan-400;
   }
 
   .feature-card {
-    @apply p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-300;
+    @apply p-6 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-500 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent;
   }
 
   .premium-shadow {
-    @apply shadow-sm hover:shadow-md transition-shadow duration-300;
+    @apply shadow-lg shadow-cyan-500/10 hover:shadow-xl hover:shadow-cyan-500/20 transition-shadow duration-300;
   }
 
   .section-spacing {
     @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .dark-card {
+    @apply bg-slate-800 border border-slate-700 rounded-xl;
+  }
+
+  .creator-badge {
+    @apply inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-slate-900 font-bold text-sm;
   }
 }
