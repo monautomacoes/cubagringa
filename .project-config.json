@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663485260835/DB4QsKRSTwPNoQfiwyQidu",
+    "access_key_id": "ASIAZV3A2ECZPZ7MVIVO",
+    "secret_access_key": "yGknlT5MnwR4rpofcE6s2yqDPT5iTqRoEp9AgfPe",
+    "session_token": "IQoJb3JpZ2luX2VjEOj//////////wEaCXVzLWVhc3QtMSJGMEQCIBAAgNtoeobFS5XNrReV0omMLs/6fObXjOcMogtqceo2AiB/B0HDU9fXru9n2/9L1+NIjayHiQbc7Sdkb0zDOBryESr/Awiw//////////8BEAQaDDY2NTM4NjA5ODg2NiIM6/JF6wLf7Qz3cmN3KtMD0tZBlYM+BYEnqcT6ufOaq8CliMk7ZN1FW3IFqdBl4/Zh/0Y9xucYqsqbNvfGRiXIUKuSbshAwTykPju+HNphfLBDLoSO604rMb8ZfdKawecE3YsUJOKa0cEtlO70rLV2TmZBnIcbo8IK6RUDgNb/cJmqY5JJ+SMfFDaGessTK04E9QBTawI1HQi5BWGzN+9PL2MR/Gy2jGkh71Kd0/0d1x5if9y8Zz2iKKWszU8SH/nLr894Q8HHffywU0ri//7rzUUYEQF2OAJHrDIEuheTwys920ga5gbHNfh5xFilW4hCbky97nTaHevoxbSZNIsCzXvS02dXWxYYr1PtMVSg0lJks7XVIJgvexXf4LmTTUtDZ3hycmeM8V5dwHKFJ3FF/55oHQZKXFdObtpCE3/2pTo+Bp3RgUP9UZiJWQvWijn/2XULDe0jZ8IFgnRyqqSVbQNtrBTmtvPKsOzYZwNvTO3KFAae8LYSoRVwYH682hVGD1H3aFeZo/xUL+2gmhSsByeRoo88lla8mBRdeIc/mbwyiHF30OT/wH/REBWobledNPe6A3OgsQE4dGbHrjNmzvCWJwt0+36GZgmeqE1TgGwGOSgstmebaEMvykuLDo6mBu4w1pep0AY6ngFiLZmLopTQRCfoovC7lQAroxhA4VlVMgmMipnN/s/l/J9dxfSgZLkzpTnAa2voW1We/gOy9e3Ghch7Yh7ucxZ3tUxMqeqaNcsrpgg5jnUP1uhDy75MrQ8JT12QTDt9zyX8MfIqo17lfIFbAHScRHJj+B6PPKNZBNujbI7avFdmVDgiOdmfqObGAslUMubombSRGYWr/j3Xu7MbPz5iwA==",
+    "expiration": "2026-05-18T11:14:30.000Z"
+  },
+  "name": "metodo-cuba-lucrativa",
+  "path": "/home/ubuntu/metodo-cuba-lucrativa",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "efT5EAcBporUejJyW5VEYL",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "Xz8ciSWMYT54y3zk5xHTy3",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "metodocubalucrativa",
+    "OWNER_OPEN_ID": "XHWsM33Kr8LeDuZU5MEe4b",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "24d3c998-7676-4106-b4e7-bd492a7babd0",
+    "VITE_APP_ID": "DB4QsKRSTwPNoQfiwyQidu",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Profitable Cuba Method - High-End Concrete Sinks",
+    "VITE_FRONTEND_FORGE_API_KEY": "RPecnoRokWnZdi37DqUCMj",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
