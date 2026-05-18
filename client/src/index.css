@@ -224,4 +224,24 @@
   .creator-badge {
     @apply inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-slate-900 font-bold text-sm;
   }
+
+  /* Pulsing Button Animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7), 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(0, 212, 255, 0), 0 0 30px rgba(0, 212, 255, 0.8);
+    }
+  }
+
+  .pulse-button {
+    animation: pulse-glow 2s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .pulse-button {
+      animation: pulse-glow 2s infinite;
+    }
+  }
 }

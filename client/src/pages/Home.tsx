@@ -71,13 +71,13 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Master the exclusive method used by 1,357+ students worldwide to create and sell luxury concrete sinks. Generate $1,000 to $2,000+ per month with minimal investment and zero experience required.
+                Master the exclusive method used by 1,050+ students worldwide to create and sell luxury concrete sinks. Generate $1,000 to $2,000+ per month with minimal investment and zero experience required.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="cta-button text-lg"
+                  className="pulse-button cta-button text-lg"
                   onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Get Access Now - $147
@@ -93,7 +93,7 @@ export default function Home() {
 
               <div className="flex items-center gap-4 pt-4 text-sm text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span>30-day money-back guarantee</span>
+                <span>15-day money-back guarantee</span>
               </div>
             </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
                 className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20"
               />
               <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-900 p-6 rounded-xl shadow-2xl max-w-xs font-bold">
-                <p className="text-lg">1,357+ Students</p>
+                <p className="text-lg">1,050+ Students</p>
                 <p className="text-sm opacity-90">Learning in 72 Countries</p>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <p className="stat-number">1,357+</p>
+              <p className="stat-number">1,050+</p>
               <p className="text-gray-300 mt-2">Active Students</p>
             </div>
             <div className="text-center">
@@ -146,11 +146,11 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur opacity-30" />
               <img
                 src="/manus-storage/rafael-bruno-mentor_1c25ce18.jpg"
-                alt="Rafael Bruno - Creator of Profitable Cuba Method"
+                alt="Rafael Bruno - Founder of Profitable Cuba Method"
                 className="relative w-full rounded-2xl shadow-2xl shadow-cyan-500/30 border border-cyan-500/30"
               />
               <div className="absolute bottom-6 left-6 creator-badge">
-                12 Years Expert
+                Founder & Expert
               </div>
             </div>
 
@@ -161,7 +161,7 @@ export default function Home() {
                   Meet <span className="gradient-text">Rafael Bruno</span>
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Creator & Mentor of the Profitable Cuba Method
+                  Manufacturer, Owner of Concretto Coatings & Creator of the Profitable Cuba Method
                 </p>
               </div>
 
@@ -169,15 +169,15 @@ export default function Home() {
                 <div className="flex gap-4">
                   <Award className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-white">12 Years of Experience</p>
+                    <p className="font-bold text-white">10+ Years of Experience</p>
                     <p className="text-gray-300">Industry expert in premium concrete craftsmanship</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-white">1,357+ Students Trained</p>
-                    <p className="text-gray-300">Proven track record of success across 72 countries</p>
+                    <p className="font-bold text-white">1,050+ Students Trained</p>
+                    <p className="text-gray-300">Proven track record of success across multiple countries</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -197,12 +197,12 @@ export default function Home() {
               </div>
 
               <p className="text-gray-300 leading-relaxed pt-4">
-                Rafael Bruno has dedicated over a decade to perfecting the art of creating high-end concrete sinks and building a sustainable business around it. His proven method has transformed the lives of entrepreneurs worldwide, helping them escape the 9-to-5 grind and build profitable, creative businesses.
+                Rafael Bruno is a manufacturer and owner of Concretto Coatings who has developed this unique method to teach people who want to make high-standard concrete vats. With more than 10 years working in the field, Rafael currently has more than 1,050 students in Brazil, Angola, the United States, Argentina, Uruguay, Lebanon, Paraguay, Canada, Chile and Africa.
               </p>
 
               <Button
                 size="lg"
-                className="cta-button text-lg"
+                className="pulse-button cta-button text-lg"
                 onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Learn from Rafael Bruno
@@ -267,6 +267,7 @@ export default function Home() {
                 income: "$1,500/sink",
                 text: "Within 2 months, I was making $1,500 per sink. This method completely changed my life. Highly recommended!",
                 rating: 5,
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/testimonial-michael-johnson-usa-53RKiXpPLrba6NxfFWgS2s.webp",
               },
               {
                 name: "Sarah Williams",
@@ -274,6 +275,7 @@ export default function Home() {
                 income: "$1,200/sink",
                 text: "The step-by-step guidance is incredible. Even with zero experience, I created beautiful sinks that customers love.",
                 rating: 5,
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/testimonial-sarah-williams-uk-j9GXZ48WZbTikPCYJDGcXG.webp",
               },
               {
                 name: "David Chen",
@@ -281,9 +283,10 @@ export default function Home() {
                 income: "$2,000/month",
                 text: "Best investment I made. The community support is amazing, and the results speak for themselves. Thank you!",
                 rating: 5,
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/testimonial-david-chen-canada-2EwD3B2BYb3ULMp7sPdMjA.webp",
               },
             ].map((testimonial, idx) => (
-              <Card key={idx} className="dark-card p-8 hover:border-cyan-500/50 transition-all duration-300">
+              <Card key={idx} className="dark-card p-8 hover:border-cyan-500/50 transition-all duration-300 flex flex-col">
                 <div className="flex gap-1 mb-4">
                   {Array(testimonial.rating)
                     .fill(0)
@@ -293,10 +296,15 @@ export default function Home() {
                       </span>
                     ))}
                 </div>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-24 h-24 rounded-full mb-4 object-cover border-2 border-cyan-500/30"
+                />
                 <div className="mb-4 inline-block px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full">
                   <span className="text-sm font-bold text-cyan-400">{testimonial.income}</span>
                 </div>
-                <p className="text-gray-200 mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-gray-200 mb-6 italic flex-grow">"{testimonial.text}"</p>
                 <div>
                   <p className="font-bold text-white">{testimonial.name}</p>
                   <p className="text-sm text-gray-400">{testimonial.location}</p>
@@ -327,7 +335,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-slate-900 font-bold">
-                    1.3K+
+                    1K+
                   </div>
                   <p className="font-semibold text-white">Successful entrepreneurs</p>
                 </div>
@@ -354,7 +362,7 @@ export default function Home() {
               {
                 icon: <Globe className="w-8 h-8" />,
                 title: "Global Community",
-                desc: "Learn from 1,357+ students across 72 countries. Access exclusive community support.",
+                desc: "Learn from 1,050+ students across 72 countries. Access exclusive community support.",
               },
               {
                 icon: <TrendingUp className="w-8 h-8" />,
@@ -379,7 +387,7 @@ export default function Home() {
               {
                 icon: <CheckCircle2 className="w-8 h-8" />,
                 title: "Money-Back Guarantee",
-                desc: "30-day guarantee. If you're not satisfied, get a full refund, no questions asked.",
+                desc: "15-day guarantee. If you're not satisfied, get a full refund, no questions asked.",
               },
             ].map((benefit, idx) => (
               <Card key={idx} className="dark-card p-6 hover:border-cyan-500/50 transition-all duration-300">
@@ -392,6 +400,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* You've Got Nothing to Lose - Guarantee Section */}
+      <section className="section-spacing bg-gradient-to-b from-slate-950 to-slate-900">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              You've Got <span className="gradient-text">Nothing to Lose</span>
+            </h2>
+            
+            <div className="flex justify-center mb-8">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/guarantee-seal-15days-kkazUB7xD82dbgT8o2Frdb.webp"
+                alt="15 Days Money Back Guarantee"
+                className="w-48 h-48 object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            <div className="max-w-3xl mx-auto border-2 border-green-500 border-dashed rounded-2xl p-8 bg-green-500/5">
+              <p className="text-lg text-gray-200 leading-relaxed font-semibold">
+                <span className="text-white font-bold">WARRANTY:</span> If you follow all our teachings and fail to learn, within 15 days, we will refund your money. This is a commitment to our customers to ensure the satisfaction and trust of our method.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="cta-section" className="section-spacing bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-slate-950 border-y border-cyan-500/30">
         <div className="container">
@@ -400,7 +433,7 @@ export default function Home() {
               Ready to Start Your <span className="gradient-text">Concrete Business?</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join 1,357+ successful students. Get instant access to all 8 modules, lifetime support, and community access. Learn directly from Rafael Bruno.
+              Join 1,050+ successful students. Get instant access to all 8 modules, lifetime support, and community access. Learn directly from Rafael Bruno.
             </p>
 
             <div className="bg-slate-800/80 backdrop-blur border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
@@ -416,13 +449,13 @@ export default function Home() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full cta-button text-lg py-6 rounded-lg font-bold"
+                  className="w-full pulse-button cta-button text-lg py-6 rounded-lg font-bold"
                 >
                   {submitted ? "✓ Check Your Email!" : "Get Instant Access - $147"}
                 </Button>
               </form>
               <p className="text-sm text-gray-400 mt-4">
-                ✓ 30-day money-back guarantee • ✓ Lifetime access • ✓ No hidden fees
+                ✓ 15-day money-back guarantee • ✓ Lifetime access • ✓ No hidden fees
               </p>
             </div>
 
@@ -460,7 +493,7 @@ export default function Home() {
               },
               {
                 q: "Does it work outside of Brazil?",
-                a: "Yes! Our method works worldwide. We have 1,357+ successful students in 72 countries, including USA, UK, and Canada.",
+                a: "Yes! Our method works worldwide. We have 1,050+ successful students in 72 countries, including USA, UK, and Canada.",
               },
               {
                 q: "How long will I have access to the course?",
@@ -487,7 +520,7 @@ export default function Home() {
           </p>
           <Button
             size="lg"
-            className="cta-button text-lg"
+            className="pulse-button cta-button text-lg"
             onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
           >
             Get Started Now - $147
@@ -501,7 +534,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <p className="font-bold text-white mb-4">Profitable Cuba Method</p>
-              <p className="text-sm">Master the art of creating luxury concrete sinks from Rafael Bruno, the industry expert with 12+ years of experience.</p>
+              <p className="text-sm">Master the art of creating luxury concrete sinks from Rafael Bruno, the industry expert with 10+ years of experience.</p>
             </div>
             <div>
               <p className="font-bold text-white mb-4">Quick Links</p>
@@ -521,11 +554,11 @@ export default function Home() {
             </div>
             <div>
               <p className="font-bold text-white mb-4">Global Reach</p>
-              <p className="text-sm">72 Countries • 1,357+ Students • 4.9★ Rating • 12+ Years Expert</p>
+              <p className="text-sm">72 Countries • 1,050+ Students • 4.9★ Rating • 10+ Years Expert</p>
             </div>
           </div>
           <div className="border-t border-slate-700/50 pt-8 text-center text-sm">
-            <p>&copy; 2026 Método Cuba Lucrativa. All rights reserved. | 30-day Money-Back Guarantee</p>
+            <p>&copy; 2026 Método Cuba Lucrativa. All rights reserved. | 15-day Money-Back Guarantee</p>
           </div>
         </div>
       </footer>
