@@ -71,7 +71,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Master the exclusive method used by 1,050+ students worldwide to create and sell luxury concrete sinks. Generate $1,000 to $2,000+ per month with minimal investment and zero experience required.
+                Master the exclusive method used by 1,473+ students worldwide to create and sell luxury concrete sinks. Generate $1,000 to $2,000+ per month with minimal investment and zero experience required.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -105,7 +105,7 @@ export default function Home() {
                 className="w-full rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20"
               />
               <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-900 p-6 rounded-xl shadow-2xl max-w-xs font-bold">
-                <p className="text-lg">1,050+ Students</p>
+                <p className="text-lg">1,473+ Students</p>
                 <p className="text-sm opacity-90">Learning in 72 Countries</p>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <p className="stat-number">1,050+</p>
+              <p className="stat-number">1,473+</p>
               <p className="text-gray-300 mt-2">Active Students</p>
             </div>
             <div className="text-center">
@@ -176,7 +176,7 @@ export default function Home() {
                 <div className="flex gap-4">
                   <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-white">1,050+ Students Trained</p>
+                    <p className="font-bold text-white">1,473+ Students Trained</p>
                     <p className="text-gray-300">Proven track record of success across multiple countries</p>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function Home() {
               </div>
 
               <p className="text-gray-300 leading-relaxed pt-4">
-                Rafael Bruno is a manufacturer and owner of Concretto Coatings who has developed this unique method to teach people who want to make high-standard concrete vats. With more than 10 years working in the field, Rafael currently has more than 1,050 students in Brazil, Angola, the United States, Argentina, Uruguay, Lebanon, Paraguay, Canada, Chile and Africa.
+                Rafael Bruno is a manufacturer and owner of Concretto Coatings who has developed this unique method to teach people who want to make high-standard concrete vats. With more than 10 years working in the field, Rafael currently has more than 1,473 students in Brazil, Angola, the United States, Argentina, Uruguay, Lebanon, Paraguay, Canada, Chile and Africa.
               </p>
 
               <Button
@@ -433,35 +433,25 @@ export default function Home() {
               Ready to Start Your <span className="gradient-text">Concrete Business?</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join 1,050+ successful students. Get instant access to all 8 modules, lifetime support, and community access. Learn directly from Rafael Bruno.
+              Join 1,473+ successful students. Get instant access to all 8 modules, lifetime support, and community access. Learn directly from Rafael Bruno.
             </p>
 
-            <div className="bg-slate-800/80 backdrop-blur border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-6 py-4 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                />
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full pulse-button cta-button text-lg py-6 rounded-lg font-bold"
-                >
-                  {submitted ? "✓ Check Your Email!" : "Get Instant Access - $147"}
-                </Button>
-              </form>
-              <p className="text-sm text-gray-400 mt-4">
+            <div className="space-y-6">
+              <Button
+                size="lg"
+                className="w-full pulse-button cta-button text-xl py-8 rounded-xl font-bold shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/80 transition-all duration-300 transform hover:scale-105"
+              >
+                🔥 BUY NOW - Get Instant Access - $147
+              </Button>
+              
+              <p className="text-sm text-gray-300 font-semibold">
                 ✓ 15-day money-back guarantee • ✓ Lifetime access • ✓ No hidden fees
               </p>
+              
+              <p className="text-gray-400 text-sm">
+                Limited spots available. Join the next cohort of successful entrepreneurs.
+              </p>
             </div>
-
-            <p className="text-gray-400 mt-8">
-              Limited spots available. Join the next cohort of successful entrepreneurs.
-            </p>
           </div>
         </div>
       </section>
@@ -493,7 +483,7 @@ export default function Home() {
               },
               {
                 q: "Does it work outside of Brazil?",
-                a: "Yes! Our method works worldwide. We have 1,050+ successful students in 72 countries, including USA, UK, and Canada.",
+                a: "Yes! Our method works worldwide. We have 1,473+ successful students in 72 countries, including USA, UK, and Canada.",
               },
               {
                 q: "How long will I have access to the course?",
