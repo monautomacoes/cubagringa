@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Globe, Users, TrendingUp, Lock, Zap, Award, Star, Flame } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /**
  * Design Philosophy: Clean Premium American Sales Page
@@ -28,6 +28,7 @@ const Button = ({ children, className = "", size = "md", variant = "default", on
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const socialProofSlides = [
     {
@@ -50,7 +51,19 @@ export default function Home() {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + socialProofSlides.length) % socialProofSlides.length);
+    setIsAutoPlay(false);
   };
+
+  // Auto-play carousel every 5 seconds
+  useEffect(() => {
+    if (!isAutoPlay) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % socialProofSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay, socialProofSlides.length]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-gray-100">
@@ -257,13 +270,23 @@ export default function Home() {
 
               {/* Navigation Buttons */}
               <button
-                onClick={prevSlide}
+                onClick={() => {
+                  prevSlide();
+                  setIsAutoPlay(false);
+                }}
+                onMouseEnter={() => setIsAutoPlay(false)}
+                onMouseLeave={() => setIsAutoPlay(true)}
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
               >
                 ←
               </button>
               <button
-                onClick={nextSlide}
+                onClick={() => {
+                  nextSlide();
+                  setIsAutoPlay(false);
+                }}
+                onMouseEnter={() => setIsAutoPlay(false)}
+                onMouseLeave={() => setIsAutoPlay(true)}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
               >
                 →
@@ -275,7 +298,12 @@ export default function Home() {
               {socialProofSlides.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => {
+                    setCurrentSlide(index);
+                    setIsAutoPlay(false);
+                  }}
+                  onMouseEnter={() => setIsAutoPlay(false)}
+                  onMouseLeave={() => setIsAutoPlay(true)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-gray-500 hover:bg-gray-400'
                   }`}
