@@ -78,12 +78,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <Button
-                  size="lg"
-                  onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
+                <a
+                  href="https://pay.hotmart.com/V92151053D?bid=1779213135582"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
                 >
-                  🔥 BUY NOW - $147
-                </Button>
+                  <Button size="lg">
+                    🔥 BUY NOW - $147
+                  </Button>
+                </a>
                 <Button variant="outline" size="lg">
                   Watch Free Preview
                 </Button>
@@ -183,9 +187,16 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button size="lg" className="w-full sm:w-auto">
-                Learn from Rafael Bruno
-              </Button>
+              <a
+                href="https://pay.hotmart.com/V92151053D?bid=1779213135582"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full sm:w-auto"
+              >
+                <Button size="lg" className="w-full">
+                  Learn from Rafael Bruno
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -337,13 +348,18 @@ export default function Home() {
               </div>
             </div>
 
-            <Button
-              size="lg"
-              className="bg-white text-orange-600 hover:bg-gray-100"
-              onClick={() => document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" })}
+            <a
+              href="https://pay.hotmart.com/V92151053D?bid=1779213135582"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              YES! I Want This Bonus
-            </Button>
+              <Button
+                size="lg"
+                className="bg-white text-orange-600 hover:bg-gray-100"
+              >
+                YES! I Want This Bonus
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -406,9 +422,16 @@ export default function Home() {
             Join <span className="text-yellow-400 font-bold">1,473+ successful students</span>. Get instant access to all 8 modules, lifetime support, and exclusive bonus molds with up to 60% discount.
           </p>
 
-          <Button size="lg" className="text-xl px-12 py-6 mb-6">
-            🔥 BUY NOW - GET INSTANT ACCESS - $147
-          </Button>
+          <a
+            href="https://pay.hotmart.com/V92151053D?bid=1779213135582"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button size="lg" className="text-xl px-12 py-6 mb-6">
+              🔥 BUY NOW - GET INSTANT ACCESS - $147
+            </Button>
+          </a>
 
           <div className="text-gray-400 text-sm space-y-2">
             <p>✓ 15-day money-back guarantee • ✓ Lifetime access • ✓ Bonus molds included • ✓ No hidden fees</p>
