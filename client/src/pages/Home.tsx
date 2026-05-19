@@ -27,6 +27,30 @@ const Button = ({ children, className = "", size = "md", variant = "default", on
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const socialProofSlides = [
+    {
+      src: "/manus-storage/social-proof-01_e60d3c26.jpg",
+      alt: "Student Success - Thiago Alquati - $85 Sale"
+    },
+    {
+      src: "/manus-storage/social-proof-02_7d636f4a.jpg",
+      alt: "Student Success - Workshop Member - 40 Units Order"
+    },
+    {
+      src: "/manus-storage/social-proof-03_5ed1b42a.jpg",
+      alt: "Student Success - Viral Post - Multiple Designs"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % socialProofSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + socialProofSlides.length) % socialProofSlides.length);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-gray-100">
@@ -209,82 +233,54 @@ export default function Home() {
             Real Results from <span className="text-cyan-400">Our Students</span>
           </h2>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
+          <div className="max-w-3xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl bg-slate-700/50 border border-slate-600/50">
               {/* Carousel Container */}
-              <div className="overflow-hidden rounded-lg">
-                <div className="flex transition-transform duration-500" id="socialCarousel">
-                  {/* Slide 1 */}
-                  <div className="w-full flex-shrink-0">
-                    <img
-                      src="/manus-storage/social-proof-01_e60d3c26.jpg"
-                      alt="Student Success - Thiago Alquati - $85 Sale"
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                  {/* Slide 2 */}
-                  <div className="w-full flex-shrink-0">
-                    <img
-                      src="/manus-storage/social-proof-02_7d636f4a.jpg"
-                      alt="Student Success - Workshop Member - 40 Units Order"
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                  {/* Slide 3 */}
-                  <div className="w-full flex-shrink-0">
-                    <img
-                      src="/manus-storage/social-proof-03_5ed1b42a.jpg"
-                      alt="Student Success - Viral Post - Multiple Designs"
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
+              <div className="relative w-full aspect-video md:aspect-auto md:h-96 overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`
+                  }}
+                >
+                  {socialProofSlides.map((slide, index) => (
+                    <div key={index} className="w-full flex-shrink-0">
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
 
               {/* Navigation Buttons */}
               <button
-                onClick={() => {
-                  const carousel = document.getElementById('socialCarousel');
-                  if (carousel) {
-                    carousel.style.transform = 'translateX(calc(-100% * 2))';
-                    setTimeout(() => {
-                      carousel.style.transition = 'none';
-                      carousel.style.transform = 'translateX(0)';
-                      setTimeout(() => {
-                        carousel.style.transition = 'transform 0.5s ease-in-out';
-                      }, 50);
-                    }, 500);
-                  }
-                }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-full z-10 transition-colors"
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
               >
                 ←
               </button>
               <button
-                onClick={() => {
-                  const carousel = document.getElementById('socialCarousel');
-                  if (carousel) {
-                    carousel.style.transform = 'translateX(-100%)';
-                    setTimeout(() => {
-                      carousel.style.transition = 'none';
-                      carousel.style.transform = 'translateX(0)';
-                      setTimeout(() => {
-                        carousel.style.transition = 'transform 0.5s ease-in-out';
-                      }, 50);
-                    }, 500);
-                  }
-                }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-full z-10 transition-colors"
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
               >
                 →
               </button>
             </div>
 
             {/* Carousel Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              <button className="w-2 h-2 bg-cyan-400 rounded-full" />
-              <button className="w-2 h-2 bg-gray-500 rounded-full" />
-              <button className="w-2 h-2 bg-gray-500 rounded-full" />
+            <div className="flex justify-center gap-3 mt-8">
+              {socialProofSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-gray-500 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
