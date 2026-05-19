@@ -201,14 +201,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <div className="bg-slate-700/50 text-white px-4 py-2 rounded-t-lg font-bold">BEFORE</div>
-              <div className="bg-slate-800 rounded-b-lg p-4 h-64 flex items-center justify-center border border-slate-700">
-                <span className="text-gray-400 text-center">Basic concrete sink - No finishing</span>
-              </div>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/before-after-transformation-fRVTDCtyCL2v748898jUzE.webp"
+                alt="Before - Raw Materials"
+                className="w-full rounded-b-lg h-64 object-cover"
+              />
             </div>
             <div>
               <div className="bg-cyan-500 text-slate-900 px-4 py-2 rounded-t-lg font-bold">AFTER</div>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/before-after-transformation-fRVTDCtyCL2v748898jUzE.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/after-premium-concrete-sink-iZN2quRcSnfvVR6iR6yoMB.webp"
                 alt="After - Premium Concrete Sink"
                 className="w-full rounded-b-lg h-64 object-cover"
               />
