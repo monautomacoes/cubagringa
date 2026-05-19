@@ -257,11 +257,11 @@ export default function Home() {
                   }}
                 >
                   {socialProofSlides.map((slide, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
+                    <div key={index} className="w-full flex-shrink-0 flex items-center justify-center bg-slate-900/50 p-4">
                       <img
                         src={slide.src}
                         alt={slide.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain max-h-full"
                       />
                     </div>
                   ))}
