@@ -202,29 +202,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before/After Transformation */}
+      {/* Social Proof Carousel */}
       <section className="py-20 md:py-32 bg-slate-800/50">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-poppins">
-            From Beginner to <span className="text-cyan-400">Premium Creator</span>
+            Real Results from <span className="text-cyan-400">Our Students</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div className="bg-slate-700/50 text-white px-4 py-2 rounded-t-lg font-bold">BEFORE</div>
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/before-after-transformation-fRVTDCtyCL2v748898jUzE.webp"
-                alt="Before - Raw Materials"
-                className="w-full rounded-b-lg h-64 object-cover"
-              />
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              {/* Carousel Container */}
+              <div className="overflow-hidden rounded-lg">
+                <div className="flex transition-transform duration-500" id="socialCarousel">
+                  {/* Slide 1 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="/manus-storage/social-proof-01_e60d3c26.jpg"
+                      alt="Student Success - Thiago Alquati - $85 Sale"
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  {/* Slide 2 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="/manus-storage/social-proof-02_7d636f4a.jpg"
+                      alt="Student Success - Workshop Member - 40 Units Order"
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  {/* Slide 3 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="/manus-storage/social-proof-03_5ed1b42a.jpg"
+                      alt="Student Success - Viral Post - Multiple Designs"
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Buttons */}
+              <button
+                onClick={() => {
+                  const carousel = document.getElementById('socialCarousel');
+                  if (carousel) {
+                    carousel.style.transform = 'translateX(calc(-100% * 2))';
+                    setTimeout(() => {
+                      carousel.style.transition = 'none';
+                      carousel.style.transform = 'translateX(0)';
+                      setTimeout(() => {
+                        carousel.style.transition = 'transform 0.5s ease-in-out';
+                      }, 50);
+                    }, 500);
+                  }
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-full z-10 transition-colors"
+              >
+                ←
+              </button>
+              <button
+                onClick={() => {
+                  const carousel = document.getElementById('socialCarousel');
+                  if (carousel) {
+                    carousel.style.transform = 'translateX(-100%)';
+                    setTimeout(() => {
+                      carousel.style.transition = 'none';
+                      carousel.style.transform = 'translateX(0)';
+                      setTimeout(() => {
+                        carousel.style.transition = 'transform 0.5s ease-in-out';
+                      }, 50);
+                    }, 500);
+                  }
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-full z-10 transition-colors"
+              >
+                →
+              </button>
             </div>
-            <div>
-              <div className="bg-cyan-500 text-slate-900 px-4 py-2 rounded-t-lg font-bold">AFTER</div>
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663485260835/DB4QsKRSTwPNoQfiwyQidu/after-premium-concrete-sink-iZN2quRcSnfvVR6iR6yoMB.webp"
-                alt="After - Premium Concrete Sink"
-                className="w-full rounded-b-lg h-64 object-cover"
-              />
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              <button className="w-2 h-2 bg-cyan-400 rounded-full" />
+              <button className="w-2 h-2 bg-gray-500 rounded-full" />
+              <button className="w-2 h-2 bg-gray-500 rounded-full" />
             </div>
           </div>
         </div>
