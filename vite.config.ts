@@ -222,7 +222,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    strictPort: false, // Will find next available port if 3000 is busy
+    strictPort: false,
     host: true,
     allowedHosts: [
       ".manuspre.computer",
@@ -235,7 +235,12 @@ export default defineConfig({
     ],
     fs: {
       strict: true,
-      deny: ["**/.*"],
+      deny: ["**/..*"],
+    },
+    hmr: {
+      protocol: "wss",
+      host: "3000-iggibz05wqescf8ozpd5h-05415ad8.us1.manus.computer",
+      port: 443,
     },
   },
 });
