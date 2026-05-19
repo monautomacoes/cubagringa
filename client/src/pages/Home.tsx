@@ -246,10 +246,10 @@ export default function Home() {
             Real Results from <span className="text-cyan-400">Our Students</span>
           </h2>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="relative overflow-hidden rounded-2xl bg-slate-700/50 border border-slate-600/50">
+          <div className="max-w-4xl mx-auto px-2 sm:px-4">
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-slate-700/50 border border-slate-600/50 shadow-lg">
               {/* Carousel Container */}
-              <div className="relative w-full aspect-video md:aspect-auto md:h-96 overflow-hidden">
+              <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{
@@ -276,7 +276,7 @@ export default function Home() {
                 }}
                 onMouseEnter={() => setIsAutoPlay(false)}
                 onMouseLeave={() => setIsAutoPlay(true)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 sm:p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg text-sm sm:text-base"
               >
                 ←
               </button>
@@ -287,14 +287,14 @@ export default function Home() {
                 }}
                 onMouseEnter={() => setIsAutoPlay(false)}
                 onMouseLeave={() => setIsAutoPlay(true)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white p-2 sm:p-3 rounded-full z-10 transition-all duration-200 hover:scale-110 shadow-lg text-sm sm:text-base"
               >
                 →
               </button>
             </div>
 
             {/* Carousel Indicators */}
-            <div className="flex justify-center gap-3 mt-8">
+            <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
               {socialProofSlides.map((_, index) => (
                 <button
                   key={index}
@@ -304,8 +304,8 @@ export default function Home() {
                   }}
                   onMouseEnter={() => setIsAutoPlay(false)}
                   onMouseLeave={() => setIsAutoPlay(true)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-gray-500 hover:bg-gray-400'
+                  className={`rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-cyan-400 w-6 h-3 sm:w-8 sm:h-3' : 'w-2 h-2 sm:w-3 sm:h-3 bg-gray-500 hover:bg-gray-400'
                   }`}
                 />
               ))}
